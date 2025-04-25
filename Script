@@ -75,7 +75,7 @@ class Menu
         Console.WriteLine("2 | Metre <==> miles");
         Console.WriteLine("3 | Cm <==> ft");
         Console.WriteLine("==============================================");
-        Console.WriteLine("0 | Quitter");
+        Console.WriteLine("0 | Fermer");
 
         Console.WriteLine();
         Console.Write("Choix > ");
