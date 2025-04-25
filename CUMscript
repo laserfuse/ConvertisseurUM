@@ -1,0 +1,322 @@
+using System;
+
+class ConvertisseurCF
+{
+    public double celsius {get; set;}
+    public double fahrenheit {get; set;}
+
+    public void ConvCtoF()
+    {
+        double ReponseConvC = celsius*9/5;
+        ReponseConvC = ReponseConvC+32;
+
+        Console.WriteLine($"{celsius} °C = {ReponseConvC} °F");
+    }
+
+    public void ConvFtoC()
+    {
+        double ReponseConvF = fahrenheit-32;
+        ReponseConvF = ReponseConvF/1.8;
+
+        Console.WriteLine($"{fahrenheit} °F = {ReponseConvF} °C");
+    }
+}
+
+class ConvertisseurMM
+{
+    public double metre {get; set;}
+    public double miles {get; set;}
+
+    public void ConvMItoME()
+    {
+        double VincentReponse1 = miles*1.609344;
+        Console.WriteLine($"{miles} miles = {VincentReponse1} km");
+    }
+
+    public void ConvMEtoMI()
+    {
+        double VincentReponse2 = metre/1.609344;
+        Console.WriteLine($"{metre} metre = {VincentReponse2} miles");
+    }
+}
+
+class ConvertisseurCMFT
+{
+    public double cm {get; set;}
+    public double ft {get; set;}
+
+    public void ConvCtoF()
+    {
+        double ResultatCmFt = cm/30.48;
+        Console.WriteLine($"{cm} cm = {ResultatCmFt} ft");
+    }
+
+    public void ConvFtoC()
+    {
+        double ResultatFtCm = ft*30.48;
+        Console.WriteLine($"{ft} ft = {ResultatFtCm} cm");
+    }
+}
+
+class Menu
+{
+    static void Main()
+    {
+        var ConvCF = new ConvertisseurCF();
+        var ConvMM = new ConvertisseurMM();
+        var ConvFTCM = new ConvertisseurCMFT();
+
+        MenuPrincipal:
+
+        Console.Clear();
+        Console.WriteLine("Convertisseur unités de mesure.");
+        Console.WriteLine("==============================================");
+        Console.WriteLine("1 | Celsius (°C) <==> Fahrenheit (°F)");
+        Console.WriteLine("2 | Metre <==> miles");
+        Console.WriteLine("3 | Cm <==> ft");
+        Console.WriteLine("==============================================");
+        Console.WriteLine("0 | Quitter");
+
+        Console.WriteLine();
+        Console.Write("Choix > ");
+
+        int choixMP;
+        while(!int.TryParse(Console.ReadLine(), out choixMP))
+        {
+            goto MenuPrincipal;
+        }
+
+        switch(choixMP)
+        {
+            case 0:
+                Console.Clear();
+                Environment.Exit(0);
+            break;
+
+            case 1:
+                MenuConv1:
+
+                Console.Clear();
+                Console.WriteLine("Convertisseur Celsius(°C) <==> Fahrenheit(°F)");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("1 | Celsius (°C) ==> Fahrenheit (°F)");
+                Console.WriteLine("2 | Fahrenheit (°F) ==> Celsius (°C)");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("0 | Menu Principal");
+
+                Console.WriteLine();
+                Console.Write("Choix > ");
+
+                int bob;
+                while(!int.TryParse(Console.ReadLine(), out bob))
+                {
+                    goto MenuConv1;
+                }
+
+                switch(bob)
+                {
+                    case 0:
+                        Console.Clear();
+                    goto MenuPrincipal;
+
+                    case 1:
+                        MenuCF:
+
+                        Console.Clear();
+                        Console.Write("Celsius (°C) > ");
+
+                        double josh;
+                        while(!double.TryParse(Console.ReadLine(), out josh))
+                        {
+                            goto MenuCF;
+                        }
+
+                        ConvCF.celsius = josh;
+
+                        Console.Clear();
+                        ConvCF.ConvCtoF();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case 2:
+                        MenuFC:
+                        
+                        Console.Clear();
+                        Console.Write("Fahrenheit (°F) > ");
+
+                        double Martin;
+                        while(!double.TryParse(Console.ReadLine(), out Martin))
+                        {
+                            goto MenuFC;
+                        }
+
+                        ConvCF.fahrenheit = Martin;
+
+                        Console.Clear();
+                        ConvCF.ConvFtoC();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case >3:
+                        Console.Clear();
+                    goto MenuConv1;
+                }
+            goto MenuConv1;
+                
+            case 2:
+                MenuConv2:
+
+                Console.Clear();
+                Console.WriteLine("Convertisseur Metre <==> Miles");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("1 | Metre ==> Miles");
+                Console.WriteLine("2 | Miles ==> Metre");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("0 | Menu Principal");
+
+                Console.WriteLine();
+                Console.Write("Choix > ");
+
+                int Josh;
+                while(!int.TryParse(Console.ReadLine(),out Josh))
+                {
+                    goto MenuConv2;
+                }
+
+                switch(Josh)
+                {
+                    case 0:
+                        Console.Clear();
+                    goto MenuPrincipal;
+
+                    case 1:
+                        MenuMetreMiles:
+
+                        Console.Clear();
+                        Console.Write("Metre > ");
+
+                        double Hector;
+                        while(!double.TryParse(Console.ReadLine(),out Hector))
+                        {
+                            goto MenuMetreMiles;
+                        }
+
+                        ConvMM.metre = Hector;
+
+                        Console.Clear();
+                        ConvMM.ConvMEtoMI();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case 2:
+                        MenuMilesMetre:
+
+                        Console.Clear();
+                        Console.Write("Miles > ");
+
+                        double Arthur;
+                        while(!double.TryParse(Console.ReadLine(),out Arthur))
+                        {
+                            goto MenuMilesMetre;
+                        }
+
+                        ConvMM.miles = Arthur;
+
+                        Console.Clear();
+                        ConvMM.ConvMItoME();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case >3:
+                        Console.Clear();
+                    goto MenuConv2;
+                }
+            goto MenuConv2;
+
+            case 3:
+                MenuConv3:
+                Console.Clear();
+                Console.WriteLine("Convertisseur cm <==> ft");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("1 | Cm ==> Ft");
+                Console.WriteLine("2 | Ft ==> Cm");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("0 | Menu Principal");
+
+                Console.WriteLine();
+                Console.Write("Choix > ");
+
+                int Michelle;
+                while(!int.TryParse(Console.ReadLine(),out Michelle))
+                {
+                    goto MenuConv3;
+                }
+
+                switch(Michelle)
+                {
+                    case 0:
+                        Console.Clear();
+                    goto MenuPrincipal;
+
+                    case 1:
+                        MenuCmFt:
+                        Console.Clear();
+                        Console.Write("Cm > ");
+
+                        double Guillaume;
+                        while(!double.TryParse(Console.ReadLine(), out Guillaume))
+                        {
+                            goto MenuCmFt;
+                        }
+
+                        ConvFTCM.cm = Guillaume;
+
+                        Console.Clear();
+                        ConvFTCM.ConvCtoF();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case 2:
+                        MenuFtCM:
+
+                        Console.Clear();
+                        Console.Write("Ft > ");
+
+                        double Diego;
+                        while(!double.TryParse(Console.ReadLine(), out Diego))
+                        {
+                            goto MenuFtCM;
+                        }
+
+                        ConvFTCM.ft = Diego;
+
+                        Console.Clear();
+                        ConvFTCM.ConvFtoC();
+
+                        Console.Write("> ");
+                        Console.ReadKey();
+                    break;
+
+                    case >3:
+                        Console.Clear();
+                    goto MenuConv3;
+                }
+            goto MenuConv3;
+
+            case >4:
+                Console.Clear();
+            break;
+        }
+        goto MenuPrincipal;
+    }
+}
