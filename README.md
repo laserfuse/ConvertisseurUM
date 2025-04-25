@@ -44,6 +44,16 @@ Ces ajouts permettront d'étendre les possibilités du projet et de le rendre en
 ## Feedback et suggestions
 Étant débutant en C#, je suis conscient que mon script peut être amélioré. Si vous repérez des bugs, des erreurs, ou si vous connaissez des méthodes plus efficaces pour accomplir certaines tâches, je serais ravi d'apprendre grâce à vos retours. N'hésitez pas à partager vos idées ou suggestions pour m'aider à progresser et rendre ce projet encore meilleur.
 
+## Contributeurs
+Vous êtes invités à contribuer à ce projet pour l'améliorer ! Que ce soit par des suggestions, des corrections, ou des nouvelles fonctionnalités, toutes les contributions sont les bienvenues.  
+Chaque contributeur sera ajouté à une liste spéciale dans ce projet pour reconnaître leur aide. Voici comment vous pouvez contribuer :  
+- Créez une branche pour vos modifications.  
+- Soumettez une pull request sur GitHub.  
+- Ajoutez un message décrivant vos changements.
+### Liste des Contributeurs
+- **Laserfuse : Créateur du projet**
+
 ## Contact
 - **Discord: laserfuse**
 - **Email: laserfuse.contact@gmail.com**
+
