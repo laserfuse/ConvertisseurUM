@@ -42,7 +42,7 @@ Je prévois d'ajouter plusieurs autres convertisseurs à ce script dans le futur
 Ces ajouts permettront d'étendre les possibilités du projet et de le rendre encore plus polyvalent.
 
 ## Feedback et suggestions
-Étant débutant en C#, je suis conscient que mon script peut être amélioré. Si vous repérez des bugs, des erreurs, ou si vous connaissez des méthodes plus efficaces pour accomplir certaines tâches, je serais ravi d'apprendre grâce à vos retours. N'hésitez pas à partager vos idées ou suggestions pour m'aider à progresser et rendre ce projet encore meilleur.
+Étant débutant en C#, je suis conscient que mon script peut être amélioré. De plus, c'est la première fois que j'utilise GitHub de manière active, et je ne suis pas encore très familier avec toutes ses fonctionnalités. Si vous avez des suggestions pour améliorer ma page GitHub, ou si vous repérez des bugs, des erreurs, ou connaissez des méthodes plus efficaces pour accomplir certaines tâches, je serais ravi d'apprendre grâce à vos retours. N'hésitez pas à partager vos idées ou suggestions pour m'aider à progresser et rendre ce projet encore meilleur.
 
 ## Contributeurs
 Vous êtes invités à contribuer à ce projet pour l'améliorer ! Que ce soit par des suggestions, des corrections, ou des nouvelles fonctionnalités, toutes les contributions sont les bienvenues.  
@@ -56,4 +56,3 @@ Chaque contributeur sera ajouté à une liste spéciale dans ce projet pour reco
 ## Contact
 - **Discord: laserfuse**
 - **Email: laserfuse.contact@gmail.com**
-
