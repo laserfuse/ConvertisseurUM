@@ -1,58 +1,58 @@
 # Script de conversion d'unités de mesure
 
-Ce script a été développé en **C#** avec Visual Studio Code. En tant que débutant dans ce langage, j'ai créé cet outil pour apprendre et pratiquer.
+Ce projet a été développé en **C#** avec Visual Studio Code. En tant que débutant dans ce langage, j'ai conçu cet outil pour apprendre et pratiquer.
 
-## Fonctionnalités
-Actuellement, il permet de convertir les unités suivantes :
-- **Celsius ↔ Fahrenheit**
-- **Mètre ↔ Miles**
-- **Centimètre ↔ Pieds**
+## 🚀 Fonctionnalités
 
-Ce projet est conçu pour simplifier les calculs de conversion entre des unités couramment utilisées. Bien qu'il ait été conçu pour fonctionner dans le terminal, il remplit pleinement son rôle et est entièrement opérationnel.
+Actuellement, ce script permet la conversion des unités suivantes :
+- **Température** : Celsius ↔ Fahrenheit ↔ Kelvin
+- **Longueur** : Millimètre ↔ (Pouce, Pied, Mile, Yard, Centimètre, Mètre, Kilomètre)
 
-## Plans futurs
-Je prévois d'ajouter plusieurs autres convertisseurs à ce script dans le futur, tels que :  
-- **Kilogrammes ↔ Livres**  
-- **Litres ↔ Gallons**  
-- **Possibilité de choisir la langue (par exemple, français ou anglais)**  
-- **Secondes ↔ Minutes ↔ Heures**  
-- **Joules ↔ Calories**  
-- **Pascal ↔ Bar ↔ Atmosphère**  
-- **Watts ↔ Chevaux-vapeur**  
-- **Hectares ↔ Acres**  
-- **Kilobits ↔ Mégabits ↔ Gigabits**  
-- **Pouces ↔ Millimètres**  
-- **Tonnes ↔ Kilogrammes ↔ Livres**  
-- **Degrés ↔ Radians (angles)**  
-- **Nœuds ↔ Kilomètres/heure ↔ Miles/heure**  
-- **Lux ↔ Lumens ↔ Candelas**  
-- **Kelvin ↔ Celsius ↔ Fahrenheit (unités de température étendues)**  
-- **Grams ↔ Onces**  
-- **Pieds carrés ↔ Mètres carrés ↔ Acres**  
-- **Newton ↔ Kilogrammes-force**  
-- **Ampères ↔ Milliampères ↔ Microampères**  
-- **Kilo-octets ↔ Mégaoctets ↔ Gigaoctets**  
-- **Volts ↔ Millivolts**  
-- **Calories ↔ Kilocalories (nutrition)**  
-- **Tasses ↔ Litres ↔ Millilitres**  
-- **Miles nautiques ↔ Kilomètres**  
-- **Pascals ↔ Torrs**  
-- **Degré alcoolique ↔ Pourcentage volumique**  
+Ce projet vise à simplifier les calculs de conversion entre des unités couramment utilisées. Bien qu'il fonctionne en mode terminal, il est totalement opérationnel et remplit parfaitement son rôle.
 
-Ces ajouts permettront d'étendre les possibilités du projet et de le rendre encore plus polyvalent.
+## 🔮 Évolutions prévues
 
-## Feedback et suggestions
-Étant débutant en C#, je suis conscient que mon script peut être amélioré. De plus, c'est la première fois que j'utilise GitHub de manière active, et je ne suis pas encore très familier avec toutes ses fonctionnalités. Si vous avez des suggestions pour améliorer ma page GitHub, ou si vous repérez des bugs, des erreurs, ou connaissez des méthodes plus efficaces pour accomplir certaines tâches, je serais ravi d'apprendre grâce à vos retours. N'hésitez pas à partager vos idées ou suggestions pour m'aider à progresser et rendre ce projet encore meilleur.
+### 🏗️ Ajout de nouveaux convertisseurs :
+- **Centimètre ↔** (Pouce, Pied, Mile, Yard, Millimètre, Mètre, Kilomètre)
+- **Mètre ↔** (Pouce, Pied, Mile, Yard, Millimètre, Centimètre, Kilomètre)
+- **Kilomètre ↔** (Pouce, Pied, Mile, Yard, Millimètre, Centimètre, Mètre)
+- **Yard ↔** (Pouce, Pied, Mile, Millimètre, Centimètre, Mètre, Kilomètre)
+- **Mile ↔** (Pouce, Pied, Yard, Millimètre, Centimètre, Mètre, Kilomètre)
+- **Pied ↔** (Pouce, Mile, Yard, Millimètre, Centimètre, Mètre, Kilomètre)
+- **Pouce ↔** (Pied, Mile, Yard, Millimètre, Centimètre, Mètre, Kilomètre)
 
-## Contributeurs
-Vous êtes invités à contribuer à ce projet pour l'améliorer ! Que ce soit par des suggestions, des corrections, ou des nouvelles fonctionnalités, toutes les contributions sont les bienvenues.  
-Chaque contributeur sera ajouté à une liste spéciale dans ce projet pour reconnaître leur aide. Voici comment vous pouvez contribuer :  
-- Créez une branche pour vos modifications.  
-- Soumettez une pull request sur GitHub.  
-- Ajoutez un message décrivant vos changements.
-### Liste des Contributeurs
-- **Laserfuse : Créateur du projet**
+### 🆕 Développement de nouvelles catégories :
+- **Température** 🌡️
+- **Masse** ⚖️
+- **Volume** 📦
+- **Énergie** ⚡
 
-## Contact
-- **Discord: laserfuse**
-- **Email: laserfuse.contact@gmail.com**
+### ⚙️ Autres fonctionnalités :
+- **Option** ajoutée pour améliorer l'interaction et la gestion des paramètres.
+
+Ces améliorations permettront d'étendre les capacités du projet et de le rendre plus convivial et flexible.
+
+## 💡 Suggestions et feedback
+
+Étant débutant en **C#**, je suis conscient que mon script peut être amélioré. De plus, c'est ma première expérience avec **GitHub**, et je découvre encore ses nombreuses fonctionnalités.
+
+Si vous avez des suggestions pour améliorer la structure du projet ou ma page GitHub, ou si vous repérez des bugs ou des méthodes plus efficaces, vos retours seront grandement appréciés ! N'hésitez pas à partager vos idées pour m'aider à progresser et rendre ce projet encore plus utile.
+
+## 🤝 Contributeurs
+
+Vous êtes les bienvenus pour contribuer à ce projet !  
+Que ce soit des suggestions, des corrections ou l'ajout de nouvelles fonctionnalités, toute aide est précieuse. 🙌
+
+### ✨ Comment contribuer ?
+1. **Forkez** le projet.
+2. Créez une **branche** pour vos modifications.
+3. Soumettez une **pull request** sur **GitHub**.
+4. Ajoutez un message décrivant vos changements.
+
+### 👥 Liste des contributeurs
+- **Laserfuse** : Créateur du projet
+
+## 📩 Contact
+
+- **Discord** : `laserfuse`
+- **Email** : `laserfuse.contact@gmail.com`
