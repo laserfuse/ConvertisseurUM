@@ -1,60 +1,369 @@
+using System.Globalization;
 using System;
 
-class ConvertisseurCF
+class ConvertisseurTemperature
 {
     public double celsius {get; set;}
     public double fahrenheit {get; set;}
+    public double kelvin {get; set;}
 
-    public void ConvCtoF()
+    public void CelsiusToFahrenheit()
     {
-        double ReponseConvC = celsius*9/5;
-        ReponseConvC = ReponseConvC+32;
+        double CelsiusToFahrenheitReponse = celsius*9/5;
+        CelsiusToFahrenheitReponse = CelsiusToFahrenheitReponse+32;
 
-        Console.WriteLine($"{celsius} °C = {ReponseConvC} °F");
+        Console.WriteLine($"{celsius} °C = {CelsiusToFahrenheitReponse} °F");
     }
 
-    public void ConvFtoC()
+    public void CelsiusToKelvin()
+    {
+        double CelsiusToKelvinReponse = celsius+273.15;
+
+        Console.WriteLine($"{celsius} °C = {CelsiusToKelvinReponse} K");
+    }
+
+    public void FahrenheitToCelsius()
     {
         double ReponseConvF = fahrenheit-32;
         ReponseConvF = ReponseConvF/1.8;
 
         Console.WriteLine($"{fahrenheit} °F = {ReponseConvF} °C");
     }
+
+    public void FahrenheitToKelvin()
+    {
+        double FahrenheitToKelvinReponse = (fahrenheit + 459.67) * 5 / 9;
+
+        Console.WriteLine($"{fahrenheit} °F = {FahrenheitToKelvinReponse} K");
+    }
+
+    public void KelvinToCelsius()
+    {
+        double KelvinToCelsiusReponse = kelvin-273.15;
+
+        Console.WriteLine($"{kelvin} K = {KelvinToCelsiusReponse} °C");
+    }
+
+    public void KelvinToFahrenheit()
+    {
+        double KelvinToFahrenheitReponse = (kelvin*9/5)-459.67;
+
+        Console.WriteLine($"{kelvin} K = {KelvinToFahrenheitReponse} °F");
+    }
 }
 
-class ConvertisseurMM
+class ConvertisseurLongueur
 {
+    public double millimetre {get; set;}
+    public double centimetre {get; set;}
     public double metre {get; set;}
-    public double miles {get; set;}
+    public double kilometre {get; set;}
+    public double pouce {get; set;}
+    public double pied {get; set;}
+    public double mile {get; set;}
+    public double yard {get; set;}
 
-    public void ConvMItoME()
+    //Millimetre
+    public void MillimetreToCentimetre()
     {
-        double VincentReponse1 = miles*1.609344;
-        Console.WriteLine($"{miles} miles = {VincentReponse1} km");
+
     }
 
-    public void ConvMEtoMI()
+    public void MillimetreToMetre()
     {
-        double VincentReponse2 = metre/1.609344;
-        Console.WriteLine($"{metre} metre = {VincentReponse2} miles");
-    }
-}
 
-class ConvertisseurCMFT
-{
-    public double cm {get; set;}
-    public double ft {get; set;}
-
-    public void ConvCtoF()
-    {
-        double ResultatCmFt = cm/30.48;
-        Console.WriteLine($"{cm} cm = {ResultatCmFt} ft");
     }
 
-    public void ConvFtoC()
+    public void MillimetreToKilometre()
     {
-        double ResultatFtCm = ft*30.48;
-        Console.WriteLine($"{ft} ft = {ResultatFtCm} cm");
+
+    }
+
+    public void MillimetreToPouce()
+    {
+        double MillimetreToPouceResultat = millimetre/25.4;
+
+        Console.WriteLine($"{millimetre} mm = {MillimetreToPouceResultat} inch");
+    }
+
+    public void MillimetreToPied()
+    {
+        double MillimetreToPiedResultat = millimetre/304.7999902464;
+
+        Console.WriteLine($"{millimetre} mm = {MillimetreToPiedResultat} ft");
+    }
+
+    public void MillimetreToMiles()
+    {
+        double MillimetreToMilesResultat1 = millimetre/1612903.2258065;
+        string val = MillimetreToMilesResultat1.ToString();
+        double MillimetreToMilesResultat2;
+        bool hasExponential = (val.Contains("E") || val.Contains("e")) && double.TryParse(val, out MillimetreToMilesResultat2);
+        if (hasExponential)
+        {
+            decimal MillimetreToMilesResultat3 = decimal.Parse(val, NumberStyles.Float);
+            Console.WriteLine($"{MillimetreToMilesResultat3}");
+        }
+
+    }
+
+    public void MillimetreToYard()
+    {
+        double MillimetreToYardResultat = millimetre/914.4;
+
+        Console.WriteLine($"{millimetre} mm  = {MillimetreToYardResultat} yd");
+    }
+
+    //Centimetre
+    public void CentimetreToMillimetre()
+    {
+
+    }
+
+    public void CentimetreToMetre()
+    {
+
+    }
+
+    public void CentimetreToKilometre()
+    {
+
+    }
+
+    public void CentimetreToPouce()
+    {
+
+    }
+
+    public void CentimetreToPied()
+    {
+
+    }
+
+    public void CentimetreToMiles()
+    {
+
+    }
+
+    public void CentimetreToYard()
+    {
+
+    }
+
+    //Metre
+    public void MetreToMillimetre()
+    {
+
+    }
+
+    public void MetreToCentimetre()
+    {
+
+    }
+
+    public void MetreToKilometre()
+    {
+
+    }
+
+    public void MetreToPouce()
+    {
+
+    }
+
+    public void MetreToPied()
+    {
+
+    }
+
+    public void MetreToMiles()
+    {
+
+    }
+
+    public void MetreToYard()
+    {
+
+    }
+
+    //Kilometre
+    public void KilometreToMillimetre()
+    {
+
+    }
+
+    public void KilometreToCentimetre()
+    {
+
+    }
+
+    public void KilometreToMetre()
+    {
+
+    }
+
+    public void KilometreToPouce()
+    {
+
+    }
+
+    public void KilometreToPied()
+    {
+
+    }
+
+    public void KilometreToMiles()
+    {
+
+    }
+
+    public void KilometreToYard()
+    {
+
+    }
+
+    //Pouce
+    public void PouceToMillimetre()
+    {
+
+    }
+
+    public void PouceToCentimetre()
+    {
+
+    }
+
+    public void PouceToMetre()
+    {
+
+    }
+
+    public void PouceToKilometre()
+    {
+
+    }
+
+    public void PouceToPied()
+    {
+
+    }
+
+    public void PouceToMiles()
+    {
+
+    }
+
+    public void PouceToYard()
+    {
+
+    }
+
+    //Pied
+    public void PiedToMillimetre()
+    {
+
+    }
+
+    public void PiedToCentimetre()
+    {
+
+    }
+
+    public void PiedToMetre()
+    {
+
+    }
+
+    public void PiedToKilometre()
+    {
+
+    }
+
+    public void PiedToPouce()
+    {
+
+    }
+
+    public void PiedToMiles()
+    {
+
+    }
+
+    public void PiedToYard()
+    {
+
+    }
+
+    //Miles
+    public void MilesToMillimetre()
+    {
+
+    }
+
+    public void MilesToCentimetre()
+    {
+
+    }
+
+    public void MilesToMetre()
+    {
+
+    }
+
+    public void MilesToKilometre()
+    {
+
+    }
+
+    public void MilesToPouce()
+    {
+
+    }
+
+    public void MilesToPied()
+    {
+
+    }
+
+    public void MilesToYard()
+    {
+
+    }
+
+    //Yard
+    public void YardToMillimetre()
+    {
+
+    }
+
+    public void YardToCentimetre()
+    {
+
+    }
+
+    public void YardToMetre()
+    {
+
+    }
+
+    public void YardToKilometre()
+    {
+
+    }
+
+    public void YardToPouce()
+    {
+
+    }
+
+    public void YardToPied()
+    {
+
+    }
+
+    public void YardToMiles()
+    {
+
     }
 }
 
@@ -62,31 +371,36 @@ class Menu
 {
     static void Main()
     {
-        var ConvCF = new ConvertisseurCF();
-        var ConvMM = new ConvertisseurMM();
-        var ConvFTCM = new ConvertisseurCMFT();
+        var ConvTemperature = new ConvertisseurTemperature();
+        var ConvLongueur = new ConvertisseurLongueur();
 
         MenuPrincipal:
-
+        
         Console.Clear();
-        Console.WriteLine("Convertisseur unités de mesure.");
-        Console.WriteLine("==============================================");
-        Console.WriteLine("1 | Celsius (°C) <==> Fahrenheit (°F)");
-        Console.WriteLine("2 | Metre <==> miles");
-        Console.WriteLine("3 | Cm <==> ft");
-        Console.WriteLine("==============================================");
-        Console.WriteLine("0 | Fermer");
-
+        Console.WriteLine("===========================================");
+        Console.WriteLine("Convertisseur universel d'unités de mesure.");
+        Console.WriteLine("===========================================");
+        Console.WriteLine("0 | Quitter");
+        Console.WriteLine("1 | Température");
+        Console.WriteLine("2 | Longueur");
+        Console.WriteLine("3 | Masse");
+        Console.WriteLine("4 | Volume");
+        Console.WriteLine("5 | Énergie");
+        Console.WriteLine("6 | Temps");
+        Console.WriteLine("===========================================");
+        Console.WriteLine("10 | Option");
+        Console.WriteLine("===========================================");
         Console.WriteLine();
         Console.Write("Choix > ");
 
-        int choixMP;
-        while(!int.TryParse(Console.ReadLine(), out choixMP))
+        int ChoixMenuPrincipal;
+
+        while(!int.TryParse(Console.ReadLine(),out ChoixMenuPrincipal))
         {
             goto MenuPrincipal;
         }
 
-        switch(choixMP)
+        switch(ChoixMenuPrincipal)
         {
             case 0:
                 Console.Clear();
@@ -94,228 +408,1487 @@ class Menu
             break;
 
             case 1:
-                MenuConv1:
+                MenuPrincipalTemperature:
 
                 Console.Clear();
-                Console.WriteLine("Convertisseur Celsius(°C) <==> Fahrenheit(°F)");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("1 | Celsius (°C) ==> Fahrenheit (°F)");
-                Console.WriteLine("2 | Fahrenheit (°F) ==> Celsius (°C)");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("0 | Menu Principal");
-
+                Console.WriteLine("        Convertisseur température");
+                Console.WriteLine("===========================================");
+                Console.WriteLine("1 | Celsius(°C)");
+                Console.WriteLine("2 | Fahrenheit(°F)");
+                Console.WriteLine("3 | Kelvin(K)");
+                Console.WriteLine("===========================================");
+                Console.WriteLine("0 | Retourner au menu principal");
                 Console.WriteLine();
                 Console.Write("Choix > ");
 
-                int bob;
-                while(!int.TryParse(Console.ReadLine(), out bob))
+                int ChoixMenuPrincipalTemperature;
+
+                while(!int.TryParse(Console.ReadLine(),out ChoixMenuPrincipalTemperature))
                 {
-                    goto MenuConv1;
+                    goto MenuPrincipalTemperature;
                 }
 
-                switch(bob)
+                switch(ChoixMenuPrincipalTemperature)
                 {
                     case 0:
                         Console.Clear();
                     goto MenuPrincipal;
 
                     case 1:
-                        MenuCF:
+                        MenuCelsius:
 
                         Console.Clear();
-                        Console.Write("Celsius (°C) > ");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("        Convertisseur Celsius(°C)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("1 | En Fahrenheit(°F)");
+                        Console.WriteLine("2 | En Kelvin(K)");
+                        Console.WriteLine("3 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu température");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
 
-                        double josh;
-                        while(!double.TryParse(Console.ReadLine(), out josh))
+                        int ChoixMenuCelsius;
+
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuCelsius))
                         {
-                            goto MenuCF;
+                            goto MenuCelsius;
                         }
 
-                        ConvCF.celsius = josh;
+                        switch(ChoixMenuCelsius)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalTemperature;
 
-                        Console.Clear();
-                        ConvCF.ConvCtoF();
+                            case 1:
+                                MenuCelsiusToFahrenheit:
 
-                        Console.Write("> ");
-                        Console.ReadKey();
-                    break;
+                                Console.Clear();
+                                Console.Write("Celsius(°C) > ");
+
+                                double CelsiusToFahrenheitNBR;
+
+                                while(!double.TryParse(Console.ReadLine(),out CelsiusToFahrenheitNBR))
+                                {
+                                    goto MenuCelsiusToFahrenheit;
+                                }
+
+                                ConvTemperature.celsius = CelsiusToFahrenheitNBR;
+
+                                Console.Clear();
+                                ConvTemperature.CelsiusToFahrenheit();
+
+                                Console.Write("Continuer > ");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuCelsiusToKelvin:
+                                
+                                Console.Clear();
+                                Console.Write("Celsius(°C) > ");
+
+                                double CelsiusToKelvinNBR;
+
+                                while(!double.TryParse(Console.ReadLine(),out CelsiusToKelvinNBR))
+                                {
+                                    goto MenuCelsiusToKelvin;
+                                }
+
+                                ConvTemperature.celsius = CelsiusToKelvinNBR;
+
+                                Console.Clear();
+                                ConvTemperature.CelsiusToKelvin();
+
+                                Console.Write("Continuer > ");
+                                Console.ReadKey();
+                            break;
+                                
+                            case 3:
+                                MenuCelsiusToTout:
+
+                                Console.Clear();
+                                Console.Write("Celsius(°C) > ");
+
+                                double CelsiusToTout;
+
+                                while(!double.TryParse(Console.ReadLine(),out CelsiusToTout))
+                                {
+                                    goto MenuCelsiusToTout;
+                                }
+
+                                ConvTemperature.celsius = CelsiusToTout;
+
+                                Console.Clear();
+                                ConvTemperature.CelsiusToFahrenheit();
+                                ConvTemperature.CelsiusToKelvin();
+
+                                Console.Write("Continer > ");
+                                Console.ReadKey();
+                            break;
+
+                            case >3:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuCelsius;
 
                     case 2:
-                        MenuFC:
+                        MenuFahrenheit:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("        Convertisseur Fahrenheit(°F)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("1 | En Celsius(°C)");
+                        Console.WriteLine("2 | En Kelvin(K)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu température");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuFahrenheit;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuFahrenheit))
+                        {
+                            goto MenuFahrenheit;
+                        }
+
+                        switch(ChoixMenuFahrenheit)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalTemperature;
+
+                            case 1:
+                                MenuFahrenheitToCelsius:
+
+                                Console.Clear();
+                                Console.Write("Fahrenheit(°F) > ");
+
+                                double FahrenheitToCelsiusNBR;
+
+                                while(!double.TryParse(Console.ReadLine(),out FahrenheitToCelsiusNBR))
+                                {
+                                    goto MenuFahrenheitToCelsius;
+                                }
+
+                                ConvTemperature.fahrenheit = FahrenheitToCelsiusNBR;
+
+                                Console.Clear();
+                                ConvTemperature.FahrenheitToCelsius();
+
+                                Console.Write("Continuer > ");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuFahrenheitToKelvin:
+
+                                Console.Clear();
+                                Console.Write("Fahrenheit(°F) > ");
+
+                                double FahrenheitToKelvinNBR;
+
+                                while(!double.TryParse(Console.ReadLine(),out FahrenheitToKelvinNBR))
+                                {
+                                    goto MenuFahrenheitToKelvin;
+                                }
+
+                                ConvTemperature.fahrenheit = FahrenheitToKelvinNBR;
+
+                                Console.Clear();
+                                ConvTemperature.FahrenheitToKelvin();
+
+                                Console.Write("Continuer > ");
+                                Console.ReadKey();
+                            break;
+
+                            case >2:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuFahrenheit;
+
+                    case 3:
+                        MenuKelvin:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("         Convertisseur Kelvin(K)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("1 | En Celsius(°C)");
+                        Console.WriteLine("2 | En Fahrenheit(°F)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu température");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuKelvin;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuKelvin))
+                        {
+                            goto MenuKelvin;
+                        }
+
+                        switch(ChoixMenuKelvin)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalTemperature;
+
+                            case 1:
+                                MenuKelvinToCelsius:
+                                
+                                Console.Clear();
+                                Console.Write("Kelvin > ");
+
+                                double KelvinToCelsiusNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KelvinToCelsiusNBR))
+                                {
+                                    goto MenuKelvinToCelsius;
+                                }
+
+                                ConvTemperature.kelvin = KelvinToCelsiusNBR;
+
+                                Console.Clear();
+                                ConvTemperature.KelvinToCelsius();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuKelvinToFahrenheit:
+                                
+                                Console.Clear();
+                                Console.Write("Kelvin > ");
+
+                                double KelvinToFahrenheitNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KelvinToFahrenheitNBR))
+                                {
+                                    goto MenuKelvinToFahrenheit;
+                                }
+
+                                ConvTemperature.kelvin = KelvinToFahrenheitNBR;
+
+                                Console.Clear();
+                                ConvTemperature.KelvinToFahrenheit();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case >2:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuKelvin;
+
+                    case >3:
+                        Console.Clear();
+                    break;
+                }
+            goto MenuPrincipalTemperature;
+
+            case 2:
+                MenuPrincipalLongueur:
+                Console.Clear();
+                Console.WriteLine("===========================================");
+                Console.WriteLine("        Convertisseur de longueur");
+                Console.WriteLine("===========================================");
+                Console.WriteLine("0 | Retourner au menu principal");
+                Console.WriteLine("1 | Millimètre(mm)");
+                Console.WriteLine("2 | Centimètre(cm)");
+                Console.WriteLine("3 | Mètre(m)");
+                Console.WriteLine("4 | Kilomètre(km)");
+                Console.WriteLine("5 | Pouce(inch)");
+                Console.WriteLine("6 | Pied(ft)");
+                Console.WriteLine("7 | Miles(mi)");
+                Console.WriteLine("8 | Yards(yd)");
+                Console.WriteLine("===========================================");
+                Console.WriteLine();
+                Console.Write("Choix > ");
+
+                int ChoixMenuPrincipalLongueur;
+
+                while(!int.TryParse(Console.ReadLine(),out ChoixMenuPrincipalLongueur))
+                {
+                    goto MenuPrincipalLongueur;
+                }
+
+                switch(ChoixMenuPrincipalLongueur)
+                {
+                    case 0:
+                        Console.Clear();
+                    goto MenuPrincipal;
+
+                    case 1:
+                        MenuMillimetre:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("       Convertisseur Millimètre(mm)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Centimètre");
+                        Console.WriteLine("2 | En Mètre");
+                        Console.WriteLine("3 | En Kilomètre");
+                        Console.WriteLine("4 | En Pouce");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuMillimetre;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuMillimetre))
+                        {
+                            goto MenuMillimetre;
+                        }
+
+                        switch(ChoixMenuMillimetre)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+                                MenuMillimetreToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToCentimetreNBR))
+                                {
+                                    goto MenuMillimetreToCentimetre;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuMillimetreToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToMetreNBR))
+                                {
+                                    goto MenuMillimetreToMetre;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 3:
+                                MenuMillimetreToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToKilometreNBR))
+                                {
+                                    goto MenuMillimetreToKilometre;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 4:
+                                MenuMillimetreToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToPouceNBR))
+                                {
+                                    goto MenuMillimetreToPouce;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 5:
+                                MenuMillimetreToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToPiedNBR))
+                                {
+                                    goto MenuMillimetreToPied;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 6:
+                                MenuMillimetreToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToMilesNBR))
+                                {
+                                    goto MenuMillimetreToMiles;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 7:
+                                MenuMillimetreToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToYardNBR))
+                                {
+                                    goto MenuMillimetreToYard;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 8:
+                                MenuMillimetreToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Millimètre(mm) > ");
+
+                                double MillimetreToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MillimetreToToutNBR))
+                                {
+                                    goto MenuMillimetreToTout;
+                                }
+
+                                ConvLongueur.millimetre = MillimetreToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MillimetreToCentimetre();
+                                ConvLongueur.MillimetreToMetre();
+                                ConvLongueur.MillimetreToKilometre();
+                                ConvLongueur.MillimetreToPouce();
+                                ConvLongueur.MillimetreToPied();
+                                ConvLongueur.MillimetreToMiles();
+                                ConvLongueur.MillimetreToYard();
+
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case >8:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuMillimetre;
+
+                    case 2:
+                        MenuCentimetre:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("       Convertisseur Centimètre(cm)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Mètre");
+                        Console.WriteLine("3 | En Kilomètre");
+                        Console.WriteLine("4 | En Pouce");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");              
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuCentimetre;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuCentimetre))
+                        {
+                            goto MenuCentimetre;
+                        }
+
+                        switch(ChoixMenuCentimetre)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+                                MenuCentimetreToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToMillimetreNBR))
+                                {
+                                    goto MenuCentimetreToMillimetre;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuCentimetreToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToMetreNBR))
+                                {
+                                    goto MenuCentimetreToMetre;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 3:
+                                MenuCentimetreToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToKilometreNBR))
+                                {
+                                    goto MenuCentimetreToKilometre;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 4:
+                                MenuCentimetreToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToPouceNBR))
+                                {
+                                    goto MenuCentimetreToPouce;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 5:
+                                MenuCentimetreToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToPiedNBR))
+                                {
+                                    goto MenuCentimetreToPied;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 6:
+                                MenuCentimetreToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToMilesNBR))
+                                {
+                                    goto MenuCentimetreToMiles;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 7:
+                                MenuCentimetreToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToYardNBR))
+                                {
+                                    goto MenuCentimetreToYard;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 8:
+                                MenuCentimetreToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Centimètre(cm) > ");
+
+                                double CentimetreToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out CentimetreToToutNBR))
+                                {
+                                    goto MenuCentimetreToTout;
+                                }
+
+                                ConvLongueur.centimetre = CentimetreToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.CentimetreToMillimetre();
+                                ConvLongueur.CentimetreToMetre();
+                                ConvLongueur.CentimetreToKilometre();
+                                ConvLongueur.CentimetreToPouce();
+                                ConvLongueur.CentimetreToPied();
+                                ConvLongueur.CentimetreToMiles();
+                                ConvLongueur.CentimetreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case >8:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuCentimetre;
+
+                    case 3:
+                        MenuMetre:
                         
                         Console.Clear();
-                        Console.Write("Fahrenheit (°F) > ");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("          Convertisseur Mètre(m)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Kilomètre");
+                        Console.WriteLine("4 | En Pouce");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
 
-                        double Martin;
-                        while(!double.TryParse(Console.ReadLine(), out Martin))
+                        int ChoixMenuMetre;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuMetre))
                         {
-                            goto MenuFC;
+                            goto MenuMetre;
                         }
 
-                        ConvCF.fahrenheit = Martin;
-
-                        Console.Clear();
-                        ConvCF.ConvFtoC();
-
-                        Console.Write("> ");
-                        Console.ReadKey();
-                    break;
-
-                    case >3:
-                        Console.Clear();
-                    goto MenuConv1;
-                }
-            goto MenuConv1;
-                
-            case 2:
-                MenuConv2:
-
-                Console.Clear();
-                Console.WriteLine("Convertisseur Metre <==> Miles");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("1 | Metre ==> Miles");
-                Console.WriteLine("2 | Miles ==> Metre");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("0 | Menu Principal");
-
-                Console.WriteLine();
-                Console.Write("Choix > ");
-
-                int Josh;
-                while(!int.TryParse(Console.ReadLine(),out Josh))
-                {
-                    goto MenuConv2;
-                }
-
-                switch(Josh)
-                {
-                    case 0:
-                        Console.Clear();
-                    goto MenuPrincipal;
-
-                    case 1:
-                        MenuMetreMiles:
-
-                        Console.Clear();
-                        Console.Write("Metre > ");
-
-                        double Hector;
-                        while(!double.TryParse(Console.ReadLine(),out Hector))
+                        switch(ChoixMenuMetre)
                         {
-                            goto MenuMetreMiles;
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+                                MenuMetreToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToMillimetreNBR))
+                                {
+                                    goto MenuMetreToMillimetre;
+                                }
+
+                                ConvLongueur.metre = MetreToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuMetreToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToCentimetreNBR))
+                                {
+                                    goto MenuMetreToCentimetre;
+                                }
+
+                                ConvLongueur.metre = MetreToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 3:
+                                MenuMetreToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToKilometreNBR))
+                                {
+                                    goto MenuMetreToKilometre;
+                                }
+
+                                ConvLongueur.metre = MetreToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 4:
+                                MenuMetreToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToPouceNBR))
+                                {
+                                    goto MenuMetreToPouce;
+                                }
+
+                                ConvLongueur.metre = MetreToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 5:
+                                MenuMetreToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToPiedNBR))
+                                {
+                                    goto MenuMetreToPied;
+                                }
+
+                                ConvLongueur.metre = MetreToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 6:
+                                MenuMetreToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToMilesNBR))
+                                {
+                                    goto MenuMetreToMiles;
+                                }
+
+                                ConvLongueur.metre = MetreToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 7:
+                                MenuMetreToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToYardNBR))
+                                {
+                                    goto MenuMetreToYard;
+                                }
+
+                                ConvLongueur.metre = MetreToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 8:
+                                MenuMetreToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Mètre(m) > ");
+
+                                double MetreToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MetreToToutNBR))
+                                {
+                                    goto MenuMetreToTout;
+                                }
+
+                                ConvLongueur.metre = MetreToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MetreToMillimetre();
+                                ConvLongueur.MetreToCentimetre();
+                                ConvLongueur.MetreToKilometre();
+                                ConvLongueur.MetreToPouce();
+                                ConvLongueur.MetreToPied();
+                                ConvLongueur.MetreToMiles();
+                                ConvLongueur.MetreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case >8:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuMetre;
+
+                    case 4:
+                        MenuKilometre:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("        Convertisseur Kilomètre(km)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Mètre");
+                        Console.WriteLine("4 | En Pouce");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuKilometre;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuKilometre))
+                        {
+                            goto MenuKilometre;
                         }
 
-                        ConvMM.metre = Hector;
-
-                        Console.Clear();
-                        ConvMM.ConvMEtoMI();
-
-                        Console.Write("> ");
-                        Console.ReadKey();
-                    break;
-
-                    case 2:
-                        MenuMilesMetre:
-
-                        Console.Clear();
-                        Console.Write("Miles > ");
-
-                        double Arthur;
-                        while(!double.TryParse(Console.ReadLine(),out Arthur))
+                        switch(ChoixMenuKilometre)
                         {
-                            goto MenuMilesMetre;
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+                                MenuKilometreToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToMillimetreNBR))
+                                {
+                                    goto MenuKilometreToMillimetre;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 2:
+                                MenuKilometreToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToCentimetreNBR))
+                                {
+                                    goto MenuKilometreToCentimetre;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 3:
+                                MenuKilometreToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToMetreNBR))
+                                {
+                                    goto MenuKilometreToMetre;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 4:
+                                MenuKilometreToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToPouceNBR))
+                                {
+                                    goto MenuKilometreToPouce;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 5:
+                                MenuKilometreToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToPiedNBR))
+                                {
+                                    goto MenuKilometreToPied;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 6:
+                                MenuKilometreToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToMilesNBR))
+                                {
+                                    goto MenuKilometreToMiles;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 7:
+                                MenuKilometreToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToYardNBR))
+                                {
+                                    goto MenuKilometreToYard;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case 8:
+                                MenuKilometreToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Kilomètre(km) > ");
+
+                                double KilometreToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out KilometreToToutNBR))
+                                {
+                                    goto MenuKilometreToTout;
+                                }
+
+                                ConvLongueur.kilometre = KilometreToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.KilometreToMillimetre();
+                                ConvLongueur.KilometreToCentimetre();
+                                ConvLongueur.KilometreToMetre();
+                                ConvLongueur.KilometreToPouce();
+                                ConvLongueur.KilometreToPied();
+                                ConvLongueur.KilometreToMiles();
+                                ConvLongueur.KilometreToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
+                            break;
+
+                            case >8:
+                                Console.Clear();
+                            break;
+                        }
+                    goto MenuKilometre;
+
+                    case 5:
+                        MenuPouce:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("        Convertisseur Pouce(inch)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Mètre");
+                        Console.WriteLine("4 | En Kilomètre");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuPouce;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuPouce))
+                        {
+                            goto MenuPouce;
                         }
 
-                        ConvMM.miles = Arthur;
+                        switch(ChoixMenuPouce)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+
+                            break;
+
+                            case 2:
+
+                            break;
+
+                            case 3:
+
+                            break;
+
+                            case 4:
+
+                            break;
+
+                            case 5:
+
+                            break;
+
+                            case 6:
+
+                            break;
+
+                            case 7:
+
+                            break;
+
+                            case 8:
+
+                            break;
+
+                            case >8:
+
+                            break;
+                        }
+                    goto MenuPouce;
+
+                    case 6:
+                        MenuPied:
 
                         Console.Clear();
-                        ConvMM.ConvMItoME();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("          Convertisseur Pied(ft)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Mètre");
+                        Console.WriteLine("4 | En Kilomètre");
+                        Console.WriteLine("5 | En Pied");
+                        Console.WriteLine("6 | En Miles");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
 
-                        Console.Write("> ");
-                        Console.ReadKey();
+                        int ChoixMenuPied;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuPied))
+                        {
+                            goto MenuPied;
+                        }
+
+                        switch(ChoixMenuPied)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+
+                            break;
+
+                            case 2:
+
+                            break;
+
+                            case 3:
+
+                            break;
+
+                            case 4:
+
+                            break;
+
+                            case 5:
+
+                            break;
+
+                            case 6:
+
+                            break;
+
+                            case 7:
+
+                            break;
+
+                            case 8:
+
+                            break;
+
+                            case >8:
+
+                            break;
+                        }
+                    goto MenuPied;
+
+                    case 7:
+                        MenuMiles:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("         Convertisseur Miles(mi)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Mètre");
+                        Console.WriteLine("4 | En Kilomètre");
+                        Console.WriteLine("5 | En Pouce");
+                        Console.WriteLine("6 | En Pied");
+                        Console.WriteLine("7 | En Yards");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuMiles;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuMiles))
+                        {
+                            goto MenuMiles;
+                        }
+
+                        switch(ChoixMenuMiles)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+
+                            break;
+
+                            case 2:
+
+                            break;
+
+                            case 3:
+
+                            break;
+
+                            case 4:
+
+                            break;
+
+                            case 5:
+
+                            break;
+
+                            case 6:
+
+                            break;
+
+                            case 7:
+
+                            break;
+
+                            case 8:
+
+                            break;
+
+                            case >8:
+
+                            break;
+                        }
+                    goto MenuMiles;
+
+                    case 8:
+                        MenuYard:
+
+                        Console.Clear();
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("          Convertisseur Yard(yd)");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine("0 | Retourner au menu longueur");
+                        Console.WriteLine("1 | En Millimètre");
+                        Console.WriteLine("2 | En Centimètre");
+                        Console.WriteLine("3 | En Mètre");
+                        Console.WriteLine("4 | En Kilomètre");
+                        Console.WriteLine("5 | En Pouce");
+                        Console.WriteLine("6 | En Pied");
+                        Console.WriteLine("7 | En Miles");
+                        Console.WriteLine("8 | Tout");
+                        Console.WriteLine("===========================================");
+                        Console.WriteLine();
+                        Console.Write("Choix > ");
+
+                        int ChoixMenuYard;
+                        while(!int.TryParse(Console.ReadLine(),out ChoixMenuYard))
+                        {
+                            goto MenuYard;
+                        }
+
+                        switch(ChoixMenuYard)
+                        {
+                            case 0:
+                                Console.Clear();
+                            goto MenuPrincipalLongueur;
+
+                            case 1:
+
+                            break;
+
+                            case 2:
+
+                            break;
+
+                            case 3:
+
+                            break;
+
+                            case 4:
+
+                            break;
+
+                            case 5:
+
+                            break;
+
+                            case 6:
+
+                            break;
+
+                            case 7:
+
+                            break;
+
+                            case 8:
+
+                            break;
+
+                            case >8:
+
+                            break;
+                        }
+                    goto MenuYard;
+
+                    case >8:
+                        Console.Clear();
                     break;
-
-                    case >3:
-                        Console.Clear();
-                    goto MenuConv2;
                 }
-            goto MenuConv2;
+            goto MenuPrincipalLongueur;
 
             case 3:
-                MenuConv3:
+
+            break;
+
+            case 4:
+
+            break;
+
+            case 5:
+
+            break;
+
+            case 6:
+
+            break;
+
+            case 10:
                 Console.Clear();
-                Console.WriteLine("Convertisseur cm <==> ft");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("1 | Cm ==> Ft");
-                Console.WriteLine("2 | Ft ==> Cm");
-                Console.WriteLine("==============================================");
-                Console.WriteLine("0 | Menu Principal");
-
+                Console.WriteLine("Pas encore disponible !");
                 Console.WriteLine();
-                Console.Write("Choix > ");
+                Console.Write("Continuer > ");
+                Console.ReadKey();
+            break;
 
-                int Michelle;
-                while(!int.TryParse(Console.ReadLine(),out Michelle))
-                {
-                    goto MenuConv3;
-                }
-
-                switch(Michelle)
-                {
-                    case 0:
-                        Console.Clear();
-                    goto MenuPrincipal;
-
-                    case 1:
-                        MenuCmFt:
-                        Console.Clear();
-                        Console.Write("Cm > ");
-
-                        double Guillaume;
-                        while(!double.TryParse(Console.ReadLine(), out Guillaume))
-                        {
-                            goto MenuCmFt;
-                        }
-
-                        ConvFTCM.cm = Guillaume;
-
-                        Console.Clear();
-                        ConvFTCM.ConvCtoF();
-
-                        Console.Write("> ");
-                        Console.ReadKey();
-                    break;
-
-                    case 2:
-                        MenuFtCM:
-
-                        Console.Clear();
-                        Console.Write("Ft > ");
-
-                        double Diego;
-                        while(!double.TryParse(Console.ReadLine(), out Diego))
-                        {
-                            goto MenuFtCM;
-                        }
-
-                        ConvFTCM.ft = Diego;
-
-                        Console.Clear();
-                        ConvFTCM.ConvFtoC();
-
-                        Console.Write("> ");
-                        Console.ReadKey();
-                    break;
-
-                    case >3:
-                        Console.Clear();
-                    goto MenuConv3;
-                }
-            goto MenuConv3;
-
-            case >4:
+            case >6:
                 Console.Clear();
             break;
+
+            
         }
         goto MenuPrincipal;
     }
