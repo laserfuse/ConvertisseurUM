@@ -1619,39 +1619,181 @@ class Menu
                             goto MenuPrincipalLongueur;
 
                             case 1:
+                                MenuPouceToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToMillimetreNBR))
+                                {
+                                    goto MenuPouceToMillimetre;
+                                }
+
+                                ConvLongueur.pouce = PouceToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 2:
+                                MenuPouceToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToCentimetreNBR))
+                                {
+                                    goto MenuPouceToCentimetre;
+                                }
+
+                                ConvLongueur.pouce = PouceToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 3:
+                                MenuPouceToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToMetreNBR))
+                                {
+                                    goto MenuPouceToMetre;
+                                }
+
+                                ConvLongueur.pouce = PouceToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 4:
+                                MenuPouceToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToKilometreNBR))
+                                {
+                                    goto MenuPouceToKilometre;
+                                }
+
+                                ConvLongueur.pouce = PouceToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 5:
+                                MenuPouceToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToPiedNBR))
+                                {
+                                    goto MenuPouceToPied;
+                                }
+
+                                ConvLongueur.pouce = PouceToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 6:
+                                MenuPouceToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToMilesNBR))
+                                {
+                                    goto MenuPouceToMiles;
+                                }
+
+                                ConvLongueur.pouce = PouceToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 7:
+                                MenuPouceToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToYardNBR))
+                                {
+                                    goto MenuPouceToYard;
+                                }
+
+                                ConvLongueur.pouce = PouceToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 8:
+                                MenuPouceToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Pouce(inch) > ");
 
+                                double PouceToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PouceToToutNBR))
+                                {
+                                    goto MenuPouceToTout;
+                                }
+
+                                ConvLongueur.pouce = PouceToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PouceToMillimetre();
+                                ConvLongueur.PouceToCentimetre();
+                                ConvLongueur.PouceToMetre();
+                                ConvLongueur.PouceToKilometre();
+                                ConvLongueur.PouceToPied();
+                                ConvLongueur.PouceToMiles();
+                                ConvLongueur.PouceToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case >8:
-
+                                Console.Clear();
                             break;
                         }
                     goto MenuPouce;
@@ -1689,39 +1831,181 @@ class Menu
                             goto MenuPrincipalLongueur;
 
                             case 1:
+                                MenuPiedToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToMillimetreNBR))
+                                {
+                                    goto MenuPiedToMillimetre;
+                                }
+
+                                ConvLongueur.pied = PiedToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 2:
+                                MenuPiedToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToCentimetreNBR))
+                                {
+                                    goto MenuPiedToCentimetre;
+                                }
+
+                                ConvLongueur.pied = PiedToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 3:
+                                MenuPiedToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToMetreNBR))
+                                {
+                                    goto MenuPiedToMetre;
+                                }
+
+                                ConvLongueur.pied = PiedToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 4:
+                                MenuPiedToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToKilometreNBR))
+                                {
+                                    goto MenuPiedToKilometre;
+                                }
+
+                                ConvLongueur.pied = PiedToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 5:
+                                MenuPiedToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToPouceNBR))
+                                {
+                                    goto MenuPiedToPouce;
+                                }
+
+                                ConvLongueur.pied = PiedToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 6:
+                                MenuPiedToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToMilesNBR))
+                                {
+                                    goto MenuPiedToMiles;
+                                }
+
+                                ConvLongueur.pied = PiedToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 7:
+                                MenuPiedToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToYardNBR))
+                                {
+                                    goto MenuPiedToYard;
+                                }
+
+                                ConvLongueur.pied = PiedToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 8:
+                                MenuPiedToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Pied(ft) > ");
 
+                                double PiedToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out PiedToToutNBR))
+                                {
+                                    goto MenuPiedToTout;
+                                }
+
+                                ConvLongueur.pied = PiedToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.PiedToMillimetre();
+                                ConvLongueur.PiedToCentimetre();
+                                ConvLongueur.PiedToMetre();
+                                ConvLongueur.PiedToKilometre();
+                                ConvLongueur.PiedToPouce();
+                                ConvLongueur.PiedToMiles();
+                                ConvLongueur.PiedToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case >8:
-
+                                Console.Clear();
                             break;
                         }
                     goto MenuPied;
@@ -1759,39 +2043,181 @@ class Menu
                             goto MenuPrincipalLongueur;
 
                             case 1:
+                                MenuMilesToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToMillimetreNBR))
+                                {
+                                    goto MenuMilesToMillimetre;
+                                }
+
+                                ConvLongueur.mile = MilesToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 2:
+                                MenuMilesToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToCentimetreNBR))
+                                {
+                                    goto MenuMilesToCentimetre;
+                                }
+
+                                ConvLongueur.mile = MilesToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 3:
+                                MenuMilesToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToMetreNBR))
+                                {
+                                    goto MenuMilesToMetre;
+                                }
+
+                                ConvLongueur.mile = MilesToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 4:
+                                MenuMilesToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToKilometreNBR))
+                                {
+                                    goto MenuMilesToKilometre;
+                                }
+
+                                ConvLongueur.mile = MilesToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 5:
+                                MenuMilesToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToPouceNBR))
+                                {
+                                    goto MenuMilesToPouce;
+                                }
+
+                                ConvLongueur.mile = MilesToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 6:
+                                MenuMilesToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToPiedNBR))
+                                {
+                                    goto MenuMilesToPied;
+                                }
+
+                                ConvLongueur.mile = MilesToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 7:
+                                MenuMilesToYard:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToYardNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToYardNBR))
+                                {
+                                    goto MenuMilesToYard;
+                                }
+
+                                ConvLongueur.mile = MilesToYardNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 8:
+                                MenuMilesToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Miles(mi) > ");
 
+                                double MilesToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out MilesToToutNBR))
+                                {
+                                    goto MenuMilesToTout;
+                                }
+
+                                ConvLongueur.mile = MilesToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.MilesToMillimetre();
+                                ConvLongueur.MilesToCentimetre();
+                                ConvLongueur.MilesToMetre();
+                                ConvLongueur.MilesToKilometre();
+                                ConvLongueur.MilesToPouce();
+                                ConvLongueur.MilesToPied();
+                                ConvLongueur.MilesToYard();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case >8:
-
+                                Console.Clear();
                             break;
                         }
                     goto MenuMiles;
@@ -1829,35 +2255,177 @@ class Menu
                             goto MenuPrincipalLongueur;
 
                             case 1:
+                                MenuYardToMillimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToMillimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToMillimetreNBR))
+                                {
+                                    goto MenuYardToMillimetre;
+                                }
+
+                                ConvLongueur.yard = YardToMillimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToMillimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 2:
+                                MenuYardToCentimetre:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToCentimetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToCentimetreNBR))
+                                {
+                                    goto MenuYardToCentimetre;
+                                }
+
+                                ConvLongueur.yard = YardToCentimetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToCentimetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 3:
+                                MenuYardToMetre:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToMetreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToMetreNBR))
+                                {
+                                    goto MenuYardToMetre;
+                                }
+
+                                ConvLongueur.yard = YardToMetreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToMetre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 4:
+                                MenuYardToKilometre:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToKilometreNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToKilometreNBR))
+                                {
+                                    goto MenuYardToKilometre;
+                                }
+
+                                ConvLongueur.yard = YardToKilometreNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToKilometre();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 5:
+                                MenuYardToPouce:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToPouceNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToPouceNBR))
+                                {
+                                    goto MenuYardToPouce;
+                                }
+
+                                ConvLongueur.yard = YardToPouceNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToPouce();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 6:
+                                MenuYardToPied:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToPiedNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToPiedNBR))
+                                {
+                                    goto MenuYardToPied;
+                                }
+
+                                ConvLongueur.yard = YardToPiedNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToPied();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 7:
+                                MenuYardToMiles:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToMilesNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToMilesNBR))
+                                {
+                                    goto MenuYardToMiles;
+                                }
+
+                                ConvLongueur.yard = YardToMilesNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case 8:
+                                MenuYardToTout:
+                                
+                                Console.Clear();
+                                Console.Write("Yards(yd) > ");
 
+                                double YardToToutNBR;
+                                while(!double.TryParse(Console.ReadLine(),out YardToToutNBR))
+                                {
+                                    goto MenuYardToTout;
+                                }
+
+                                ConvLongueur.yard = YardToToutNBR;
+
+                                Console.Clear();
+                                ConvLongueur.YardToMillimetre();
+                                ConvLongueur.YardToCentimetre();
+                                ConvLongueur.YardToMetre();
+                                ConvLongueur.YardToKilometre();
+                                ConvLongueur.YardToPouce();
+                                ConvLongueur.YardToPied();
+                                ConvLongueur.YardToMiles();
+                                
+                                Console.Write("Continuer >");
+                                Console.ReadKey();
                             break;
 
                             case >8:
@@ -1873,19 +2441,35 @@ class Menu
             goto MenuPrincipalLongueur;
 
             case 3:
-
+                Console.Clear();
+                Console.WriteLine("Pas encore disponible !");
+                Console.WriteLine();
+                Console.Write("Continuer > ");
+                Console.ReadKey();
             break;
 
             case 4:
-
+                Console.Clear();
+                Console.WriteLine("Pas encore disponible !");
+                Console.WriteLine();
+                Console.Write("Continuer > ");
+                Console.ReadKey();
             break;
 
             case 5:
-
+                Console.Clear();
+                Console.WriteLine("Pas encore disponible !");
+                Console.WriteLine();
+                Console.Write("Continuer > ");
+                Console.ReadKey();
             break;
-
+                
             case 6:
-
+                Console.Clear();
+                Console.WriteLine("Pas encore disponible !");
+                Console.WriteLine();
+                Console.Write("Continuer > ");
+                Console.ReadKey();
             break;
 
             case 10:
@@ -1899,8 +2483,7 @@ class Menu
             case >6:
                 Console.Clear();
             break;
-
-            
+       
         }
         goto MenuPrincipal;
     }
