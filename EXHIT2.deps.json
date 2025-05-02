@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EXHIT2/1.0.0": {
+        "runtime": {
+          "EXHIT2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EXHIT2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
