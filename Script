@@ -66,17 +66,29 @@ class ConvertisseurLongueur
     //Millimetre
     public void MillimetreToCentimetre()
     {
+        double MillimetreToCentimetreResultat = millimetre/10;
 
+        Console.WriteLine($"{millimetre} mm = {MillimetreToCentimetreResultat} cm");
     }
 
     public void MillimetreToMetre()
     {
+        double MillimetreToMetreResultat = millimetre/1000;
 
+        Console.WriteLine($"{millimetre} mm = {MillimetreToMetreResultat} m");
     }
 
     public void MillimetreToKilometre()
     {
-
+        double MillimetreToKilometreResultat1 = millimetre/1000000;
+        string val = MillimetreToKilometreResultat1.ToString();
+        double MillimetreToKilometreResultat2;
+        bool hasExponential = (val.Contains("E") || val.Contains("e")) && double.TryParse(val, out MillimetreToKilometreResultat1);
+        if (hasExponential)
+        {
+            decimal MillimetreToKilometreResultat3 = decimal.Parse(val, NumberStyles.Float);
+            Console.WriteLine($"{millimetre} mm = {MillimetreToKilometreResultat3} km");
+        }
     }
 
     public void MillimetreToPouce()
@@ -102,7 +114,7 @@ class ConvertisseurLongueur
         if (hasExponential)
         {
             decimal MillimetreToMilesResultat3 = decimal.Parse(val, NumberStyles.Float);
-            Console.WriteLine($"{MillimetreToMilesResultat3}");
+            Console.WriteLine($"{millimetre} mm = {MillimetreToMilesResultat3} mi");
         }
 
     }
